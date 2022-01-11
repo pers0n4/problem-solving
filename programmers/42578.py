@@ -11,19 +11,23 @@ def solution(clothes: list[list[str]]):
 
 
 if __name__ == "__main__":
-    for result in map(
-        solution,
-        [
-            [
+    import unittest
+
+    class TestSolution(unittest.TestCase):
+        def test_case1(self):
+            clothes = [
                 ["yellowhat", "headgear"],
                 ["bluesunglasses", "eyewear"],
                 ["green_turban", "headgear"],
-            ],
-            [
+            ]
+            self.assertEqual(solution(clothes), 5)
+
+        def test_case2(self):
+            clothes = [
                 ["crowmask", "face"],
                 ["bluesunglasses", "face"],
                 ["smoky_makeup", "face"],
-            ],
-        ],
-    ):
-        print(result)
+            ]
+            self.assertEqual(solution(clothes), 3)
+
+    unittest.main()

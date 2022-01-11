@@ -11,12 +11,19 @@ def solution(phone_book: list[str]):
 
 
 if __name__ == "__main__":
-    for result in map(
-        solution,
-        [
-            ["119", "97674223", "1195524421"],
-            ["123", "456", "789"],
-            ["12", "123", "1235", "567", "88"],
-        ],
-    ):
-        print(result)
+    import unittest
+
+    class TestSolution(unittest.TestCase):
+        def test_case1(self):
+            phone_book = ["119", "97674223", "1195524421"]
+            self.assertEqual(solution(phone_book), False)
+
+        def test_case2(self):
+            phone_book = ["123", "456", "789"]
+            self.assertEqual(solution(phone_book), True)
+
+        def test_case3(self):
+            phone_book = ["12", "123", "1235", "567", "88"]
+            self.assertEqual(solution(phone_book), False)
+
+    unittest.main()
