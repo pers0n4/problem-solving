@@ -1,4 +1,5 @@
 # 위장
+# https://programmers.co.kr/learn/courses/30/lessons/42578
 def solution(clothes: list[list[str]]):
     from functools import reduce
 

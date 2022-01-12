@@ -1,4 +1,5 @@
 # 전화번호 목록
+# https://programmers.co.kr/learn/courses/30/lessons/42577
 def solution(phone_book: list[str]):
     hash_table = dict(map(lambda x: (x, True), phone_book))
     for phone in phone_book:
