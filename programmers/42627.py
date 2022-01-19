@@ -1,4 +1,4 @@
-# 코딩테스트 연습
+# 디스크 컨트롤러
 # https://programmers.co.kr/learn/courses/30/lessons/42627
 def solution(jobs: list[list[int]]):
     task_time = schedule_time = 0
@@ -15,7 +15,7 @@ def solution(jobs: list[list[int]]):
     return schedule_time // task_length
 
 
-if __name__ == "__mains__":
+if __name__ == "__main__":
     import unittest
 
     class TestSolution(unittest.TestCase):
